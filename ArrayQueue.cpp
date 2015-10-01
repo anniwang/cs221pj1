@@ -68,7 +68,7 @@ PuzzleState *ArrayQueue::take_out()
   // terminate if queue is empty
   assert(!is_empty());
 
-  cout << "arrayQ is dequeing" << endl;
+  //cout << "arrayQ is dequeing" << endl;
   // store output value
   PuzzleState* output = array[front];
   
@@ -110,10 +110,16 @@ void ArrayQueue::ensure_capacity(int n)
     // Update front carefully as you go!  Can you just use front++?
     for(int i = 0; i < back; i++){
       array[i] = oldarray[i];
+      front = i;
     }
 
     // TODO: Fix front and back and capacity 
     // so they correspond to the new array.
+    
+    back = target_capacity;
+    // front should be equal to i 
+    // i.e. the element in the old array.
+
 
     // update capacity
     capacity = target_capacity;
@@ -137,3 +143,4 @@ ArrayQueue::~ArrayQueue()
 }
 
 #endif
+
