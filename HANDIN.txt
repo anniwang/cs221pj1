@@ -1,10 +1,10 @@
 Student Name #1: Anni Wang
-Student ugrad login #1: 17574138
+Student ugrad login #1: v8v8
 
-Student Name #2: TODO:
-Student ugrad login #2: TODO:
+Student Name #2: Marinah Zhao
+Student ugrad login #2: d7c9
 
-Team name (for fun!): TODO:
+Team name (for fun!): Team MCJAGGER
 
 We acknowledgment that we understand and have followed the course's
 collaboration policy
@@ -41,31 +41,65 @@ Do you see why this is called breadth-first search (BFS)?
 How many steps long was your solution?  How does this compare with
 the length of the solution (the number of steps) using DFS?
 
-TODO:
+The queues implementation is called BFS because it is exploring the points adjacent to the each point, instead of exploring each path from the starting point to the endpoint in DFS. From our observation, in BFS we can see that the exploring X is exploring multiple paths at the same time, while in DFS, the exploring X moves around a single path at a time.  
+Both the ArrayQueue and LinkedListQueue took the same number of steps (59 steps).Using BFS (queues) took the same number of steps as using DFS (stacks).
+
 
 2.  Try to solve the blank Sudoku board using your ArrayQueue
 and LinkedListQueue classes.  What happens?
 
-TODO:
+ArrayQueue and LinkedListQueues cannot solve the Sudoku board and takes a long time.
 
 3.  Switch to the medium-difficulty Sudoku problem, and comment
 out the delay and the print statements in the solvePuzzle function.
 How long does it take to solve the puzzle using your ArrayQueue
 class?  Using your LinkedListQueue class?  Is the difference big?
 
-TODO:
+This is the solution achieved from using our queues:
+
+STEP 51:
+ 1 6 7 8 4 9 5 3 2
+ 9 5 3 6 2 1 8 4 7
+ 2 8 4 3 7 5 1 6 9
+ 6 4 1 2 5 7 9 8 3
+ 8 7 9 1 6 3 4 2 5
+ 3 2 5 9 8 4 7 1 6
+ 7 1 6 5 3 8 2 9 4
+ 4 9 2 7 1 6 3 5 8
+ 5 3 8 4 9 2 6 7 1
+
+
+The LinkedListQueue took ~50.7s 
+real	0m50.683s
+user	0m50.609s
+sys	0m0.041s
+while the ArrayQueue took ~50.6s
+real	0m50.585s
+user	0m50.525s
+sys	0m0.035s
+
+The ArrayQueue is faster, but the difference is not big. 
 
 5.  Edit solve.cpp to switch to English Peg Solitaire.  Try solving
 this with the faster of your ArrayQueue or LinkedListQueue classes
 (based on your answer to #3).  What happens?
 
-TODO:
+It solves the solution in 32 steps. 
+
+STEP 32:
+  .o.  
+  ...  
+.......
+.......
+.......
+  ...  
+  ...  
 
 6.  Edit solve.cpp to switch to the 3x3 slider puzzle.  Try solving
 this with the faster of your ArrayQueue or LinkedListQueue classes
 (based on your answer to #3).  What happens?
 
-TODO:
+It could not solve the 3x3 slider puzzle.
 
 ----------------------------------------------------------------------
 

@@ -16,14 +16,19 @@ LinkedListQueue::LinkedListQueue()
 void LinkedListQueue::put_in(PuzzleState *elem)
 {
 	if (is_empty()){
-		head = tail = new node;
-		head->next = NULL;
-		head->data = elem;
+		node* temp = new node;
+		temp->next = NULL;
+		temp->data = elem;
+		head = temp;
+		tail = temp;
 	}	
 	else {
-		tail->next = new node;
-		tail->next = NULL;
-		tail->data = elem;
+		node* temp = new node;
+		temp->next = NULL;
+		temp->data = elem;
+	
+		tail->next = temp;
+		tail = temp;
 	}
 }
 
@@ -45,9 +50,7 @@ bool LinkedListQueue::is_empty()
 LinkedListQueue::~LinkedListQueue()
 {
   	while (!is_empty()) {
-		node* temp = head;
-		head = head->next;
-		delete temp;
+		take_out();
 	}
 }
 

@@ -52,7 +52,7 @@ void solvePuzzle(PuzzleState *start, BagOfPuzzleStates &active, PredDict &seen, 
     // run at full speed!
     cout << "Exploring State: \n";
     state->print(cout);
-    usleep(100000);	// Pause for some microseconds, to let human read output
+    usleep(10);	// Pause for some microseconds, to let human read output
 
     if (state->isSolution()) {
       // Found a solution!
@@ -99,7 +99,7 @@ int main ()
   // This is for the WolfGoatCabbage problem.
   //startState = new WolfGoatCabbage();
 
-  startState = new MazeRunner(21,41, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                       XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XX                                     X XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX X XX                                   X X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX X X XX                                   X X XX X X X X X XXXXXXXXXXXXXXXXXXXXXXXXX X XX X X X X X X                         X XX X X X X XXX XXXXXXXXXXXXXXXXXXXXXXX X XX X X X X X X           X$            X XX X X X XXX XXXXXXXXXXXXXXXXXXXXXXXXXXX XX X X X X X X                         X XX X X XXX X X XXXXXXXXXXXXXXXXXXXXXXX X XX X X X X X X X                       X XX X XXX X X X XXXXXXXXXXXXXXXXXXXXXXXXX XX X X                                   XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                       X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",1,1);
+  //startState = new MazeRunner(21,41, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                       XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XX                                     X XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX X XX                                   X X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX X X XX                                   X X XX X X X X X XXXXXXXXXXXXXXXXXXXXXXXXX X XX X X X X X X                         X XX X X X X XXX XXXXXXXXXXXXXXXXXXXXXXX X XX X X X X X X           X$            X XX X X X XXX XXXXXXXXXXXXXXXXXXXXXXXXXXX XX X X X X X X                         X XX X X XXX X X XXXXXXXXXXXXXXXXXXXXXXX X XX X X X X X X X                       X XX X XXX X X X XXXXXXXXXXXXXXXXXXXXXXXXX XX X X                                   XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                       X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",1,1);
 // This is what the maze looks like...
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // X                                       X
@@ -127,7 +127,7 @@ int main ()
   //startState = new Sudoku("000000000000000000000000000000000000000000000000000000000000000000000000000000000");
 
   // This is a medium difficulty problem:
-  //  startState = new Sudoku("167000000050600047000300009641057000800060005000980716700008000490006050000000671");
+  //startState = new Sudoku("167000000050600047000300009641057000800060005000980716700008000490006050000000671");
 
   // And this next one is a really easy Sudoku...
   //startState = new Sudoku("927430008060000097008000402000308005400060003800201000602000300790000080500089271");
@@ -137,7 +137,7 @@ int main ()
   // European peg solitaire
   //  startState = new Marble(7,7,"  ooo   ooooo oooooooooo.oooooooooo ooooo   ooo  ");
 
-  //startState = new SliderPuzzle(3,3,"8 7 6 5 4 3 2 1 0");
+  startState = new SliderPuzzle(3,3,"8 7 6 5 4 3 2 1 0");
   //startState = new SliderPuzzle(3,4,"11 10 9 8 7 6 5 4 3 1 2 0");
   //startState = new SliderPuzzle(4,4,"15 14 13 12 11 10 9 8 7 6 5 4 3 1 2 0");
 
@@ -146,9 +146,9 @@ int main ()
   // Later, you will put declarations here to use your new implementations
   // (ArrayQueue, or LinkedListQueue).
   //ArrayStack activeStates;
-  LinkedListStack activeStates;
+  //LinkedListStack activeStates;
   //ArrayQueue activeStates;
-  //LinkedListQueue activeStates;
+  LinkedListQueue activeStates;
 
   // Eventually, we'll replace this with a better dictionary ADT...
   LinkedListDict seenStates;
