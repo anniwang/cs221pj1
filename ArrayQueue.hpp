@@ -20,6 +20,8 @@ class ArrayQueue: public BagOfPuzzleStates
 
   ~ArrayQueue(); // destructor
 
+ static const int INITIAL_QSIZE = 1000;
+
  private:
   // A helper function that consumes a number and ensures the queue
   // has enough space for that many elements.
@@ -31,6 +33,9 @@ class ArrayQueue: public BagOfPuzzleStates
   PuzzleState **array;
 
   // List additional private member variables here.
+  int capacity;
+  int front;
+  int back;
 };
 
 #endif

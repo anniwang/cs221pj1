@@ -17,15 +17,19 @@ TODO: submit using: make handin-proj1
 
 ----------------------------------------------------------------------
 
-Approximate hours on project: TODO:
+Approximate hours on project: 7h 
 
 ----------------------------------------------------------------------
 
-For teams, rough breakdown of work: TODO:
+For teams, rough breakdown of work: 
+
+Anni - ArrayQueue implementation
+Marinah - LinkedListQueue implementation
+Anni & Marinah - Milestone and Handin texts 
 
 ----------------------------------------------------------------------
 
-Acknowledgment of assistance: TODO:
+Acknowledgment of assistance: None
 
 ----------------------------------------------------------------------
 
@@ -99,7 +103,7 @@ STEP 32:
 this with the faster of your ArrayQueue or LinkedListQueue classes
 (based on your answer to #3).  What happens?
 
-It could not solve the 3x3 slider puzzle.
+The program ran for a long time trying to solve the 3x3 slider puzzle, so we assume that it cannot solve the puzzle. .
 
 ----------------------------------------------------------------------
 

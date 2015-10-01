@@ -20,17 +20,6 @@ using namespace std;
 */
 
 
-// constants
-static const int INITIAL_QSIZE = 1000;
-
-// global variables
-int capacity;
-int front;
-int back;
-
-//PuzzleState **array;
-
-
 ArrayQueue::ArrayQueue()
 {
   // Constructor: initialize member variables
